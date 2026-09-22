@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { experience } from "@/content/experience";
 import { Eye, Compass, Moon } from "lucide-react";
@@ -15,12 +16,26 @@ export default function MorningSection() {
       id="the-morning"
       className="relative w-full bg-gradient-to-b from-[#0A1220] via-[#0E172A] to-[#090F1C] py-32 sm:py-48 px-6 sm:px-10 overflow-hidden"
     >
+      {/* Cinematic Jodhpur Dawn Mist Photography Backdrop */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
+        <Image
+          src="/images/jodhpur-dawn.jpg"
+          alt="Atmospheric early morning mist over Kaylana and ancient Jodhpur fortress silhouette at pre-dawn"
+          fill
+          sizes="100vw"
+          className="object-cover object-center scale-105 opacity-30 brightness-90 contrast-105"
+        />
+        {/* Atmospheric Indigo Vignettes for text contrast and depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1220] via-[#0E172A]/70 to-[#090F1C]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(14,23,42,0.4)_0%,rgba(9,15,28,0.92)_85%)]" />
+      </div>
+
       {/* Ambient Pre-Dawn Radial Glow (Warm Sunrise Rim Light) */}
       <div
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[550px] pointer-events-none opacity-35 blur-[140px]"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[550px] pointer-events-none opacity-40 blur-[140px] z-[1]"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(226, 186, 114, 0.22) 0%, rgba(14, 23, 42, 0.45) 55%, transparent 80%)",
+            "radial-gradient(ellipse at center, rgba(226, 186, 114, 0.24) 0%, rgba(14, 23, 42, 0.4) 55%, transparent 80%)",
         }}
       />
 
