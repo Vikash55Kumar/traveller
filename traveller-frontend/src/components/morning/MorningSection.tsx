@@ -19,7 +19,7 @@ export default function MorningSection() {
       {/* Cinematic Jodhpur Dawn Mist Photography Backdrop */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
         <Image
-          src="/images/jodhpur-dawn.jpg"
+          src="/images/jodhpur-dawn.webp"
           alt="Atmospheric early morning mist over Kaylana and ancient Jodhpur fortress silhouette at pre-dawn"
           fill
           sizes="100vw"

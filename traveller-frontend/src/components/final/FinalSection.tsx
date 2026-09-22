@@ -13,7 +13,7 @@ export default function FinalSection() {
       {/* Background Dawn Horizon Image */}
       <div className="absolute inset-0 z-0 select-none">
         <Image
-          src="/images/jodhpur-horizon.jpg"
+          src="/images/jodhpur-horizon.webp"
           alt="Atmospheric first light of dawn over Kailana lake escarpment and distant Mehrangarh ridge in Jodhpur"
           fill
           sizes="100vw"

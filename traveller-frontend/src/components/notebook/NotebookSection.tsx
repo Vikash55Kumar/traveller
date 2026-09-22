@@ -3,13 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { BookOpen } from "lucide-react";
 import { experience } from "@/content/experience";
 
 export default function NotebookSection() {
   const { notebook } = experience;
   const disciplines = notebook.disciplines || [];
-  const specs = notebook.specs || [];
 
   return (
     <section
@@ -82,7 +80,7 @@ export default function NotebookSection() {
 
             <div className="relative h-[440px] sm:h-[540px] md:h-[600px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-[#120F0D]">
               <Image
-                src="/images/companion-journal.jpg"
+                src="/images/companion-journal.webp"
                 alt="Open vintage traveler's notebook with deckled pages and brass pen resting on desert sandstone"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

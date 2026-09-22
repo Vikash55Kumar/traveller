@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { experience } from "@/content/experience";
-import { Menu, X, ArrowUpRight, MapPin } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navigation() {

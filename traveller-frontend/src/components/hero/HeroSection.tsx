@@ -15,7 +15,7 @@ export default function HeroSection() {
       {/* Background Mountain Mist Image */}
       <div className="absolute inset-0 z-0 select-none">
         <Image
-          src="/images/hero-dawn.jpg"
+          src="/images/hero-dawn.webp"
           alt="Atmospheric mountain silhouette in early morning mist"
           fill
           priority

@@ -2,11 +2,10 @@
 
 import React from "react";
 import { experience } from "@/content/experience";
-import { ArrowUp, ArrowUpRight, MapPin, Calendar, Compass } from "lucide-react";
-import { generateIcsFile, getGoogleCalendarUrl } from "@/lib/calendar";
+import { ArrowUp } from "lucide-react";
 
 export default function MinimalFooter() {
-  const { footer, meta } = experience;
+  const { footer } = experience;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
