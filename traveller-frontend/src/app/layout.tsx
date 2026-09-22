@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import GrainOverlay from "@/components/ui/GrainOverlay";
+import CustomCursor from "@/components/ui/CustomCursor";
 import { experience } from "@/content/experience";
 
 const cormorant = Cormorant_Garamond({
@@ -15,6 +16,13 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
   display: "swap",
 });
 
@@ -51,10 +59,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${inter.variable} scroll-smooth antialiased`}
+      className={`${cormorant.variable} ${inter.variable} ${jetbrainsMono.variable} scroll-smooth antialiased`}
     >
       <body className="bg-[#070B14] text-[#F4F1EA] font-sans min-h-screen selection:bg-[#D7A85B]/30 selection:text-[#F4F1EA]">
         <GrainOverlay />
+        <CustomCursor />
         {children}
       </body>
     </html>
