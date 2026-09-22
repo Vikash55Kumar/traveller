@@ -81,7 +81,7 @@ export default function EssentialsSection() {
                   <h3 className="font-serif text-2xl sm:text-3xl text-[#F8F6F0] font-normal mb-2 group-hover:text-[#F3D089] transition-colors">
                     {col.title}
                   </h3>
-                  <p className="text-sm text-[#A2A7B0] font-light leading-relaxed">
+                  <p className="text-sm text-[#A2A7B0] font-light leading-relaxed whitespace-pre-line">
                     {col.details}
                   </p>
                 </div>

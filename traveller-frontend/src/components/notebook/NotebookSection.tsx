@@ -68,7 +68,7 @@ export default function NotebookSection() {
         </div>
 
         {/* Two-Column Editorial Display */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-24 sm:mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Tactile Artifact Visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.97 }}

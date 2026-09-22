@@ -83,9 +83,15 @@ export default function ArrivalSection() {
               <span className="text-[#606775] font-mono text-[10px] uppercase block">
                 COORDINATES
               </span>
-              <span className="text-[#E2BA72] font-mono text-xs mt-0.5 block">
-                Kaylana Chouraha
-              </span>
+              <a
+                href={experience.meta.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#E2BA72] hover:text-[#F3D089] font-mono text-xs mt-0.5 block hover:underline transition-colors"
+                title="Open location in Google Maps"
+              >
+                Kailana Circle, Kabir Nagar ↗
+              </a>
             </div>
           </div>
 

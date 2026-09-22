@@ -136,9 +136,9 @@ export const experience: ExperienceData = {
   meta: {
     title: "The Traveller — A Morning of Walking, Observation & Questions",
     description:
-      "A quiet morning walk of observation and inquiry beginning at Kaylana Chouraha. Come prepared. The rest is meant to be discovered.",
-    locationName: "Kaylana Chouraha, Jodhpur",
-    mapsUrl: "https://maps.google.com/?q=Kaylana+Chouraha+Jodhpur",
+      "A quiet morning walk of observation and inquiry beginning at Kailana Circle, Kabir Nagar, Jodhpur. Come prepared. The rest is meant to be discovered.",
+    locationName: "Kailana Circle, Kabir Nagar, Jodhpur, Rajasthan 342008",
+    mapsUrl: "https://maps.google.com/?q=Kailana+Circle,+Kabir+Nagar,+Jodhpur,+Rajasthan+342008",
   },
   navigation: {
     brand: "THE TRAVELLER",
@@ -154,7 +154,7 @@ export const experience: ExperienceData = {
     quoteLine2: "Somewhere along the way, we forget the traveller.",
     date: "SUNDAY",
     time: "AT FIRST LIGHT",
-    location: "Kaylana Chouraha",
+    location: "Kailana Circle, Kabir Nagar",
     reporting: "05:00 AM",
     scrollPrompt: "SCROLL TO BEGIN",
   },
@@ -319,13 +319,13 @@ export const experience: ExperienceData = {
       },
       {
         tag: "LOCATION",
-        title: "Kaylana Chouraha",
-        details: "Reporting at 05:00 AM sharp",
+        title: "Kailana Circle",
+        details: "Kabir Nagar, Jodhpur, Rajasthan 342008\nReporting at 05:00 AM sharp",
         image: "/images/practical-location.jpg",
-        imageAlt: "Kaylana Lake escarpment shoreline near Jodhpur in pre-dawn blue hour mist",
+        imageAlt: "Kailana Circle lake escarpment near Kabir Nagar Jodhpur in pre-dawn blue hour mist",
         action: {
           label: "OPEN LOCATION →",
-          href: "https://maps.google.com/?q=Kaylana+Chouraha+Jodhpur",
+          href: "https://maps.google.com/?q=Kailana+Circle,+Kabir+Nagar,+Jodhpur,+Rajasthan+342008",
         },
       },
       {
@@ -405,13 +405,13 @@ export const experience: ExperienceData = {
     ],
     date: "SUNDAY",
     time: "05:00 AM",
-    location: "KAYLANA CHOURAHA",
+    location: "KAILANA CIRCLE, JODHPUR",
     unansweredQuestion:
       "You know the time and the place. But are you ready to meet the traveller?",
   },
   footer: {
     brand: "THE TRAVELLER",
-    subline: "Sunday · 5:00 AM · Kaylana Chouraha",
+    subline: "Sunday · 05:00 AM SHARP · Kailana Circle, Kabir Nagar, Jodhpur",
     year: "2026",
   },
 };

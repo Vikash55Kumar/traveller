@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://thetraveller.experience"),
   openGraph: {
     title: "The Traveller",
-    description: "Sunday · 5:00 AM · Kaylana Chouraha. The trail begins before the sun rises.",
+    description: "Sunday · 05:00 AM · Kailana Circle, Kabir Nagar, Jodhpur. The trail begins before the sun rises.",
     siteName: "The Traveller",
     locale: "en_US",
     type: "website",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Traveller — Sunday 5:00 AM",
-    description: "A four-hour morning experience beginning at 5 AM at Kaylana Chouraha. Come prepared.",
+    description: "A four-hour morning experience beginning at 5 AM at Kailana Circle, Kabir Nagar, Jodhpur. Come prepared.",
   },
 };
 

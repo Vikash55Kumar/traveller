@@ -8,8 +8,8 @@ export function generateIcsFile(): void {
     "BEGIN:VEVENT",
     "UID:traveller-morning-2026@thetraveller",
     "SUMMARY:The Traveller — Morning Experience",
-    "DESCRIPTION:The trail begins before the sun rises. Reporting sharp at 5:00 AM at Kaylana Chouraha. Bring notebook, pen, water, and trekking footwear. Everything else is meant to be discovered.",
-    "LOCATION:Kaylana Chouraha, Jodhpur",
+    "DESCRIPTION:The trail begins before the sun rises. Reporting sharp at 5:00 AM at Kailana Circle, Kabir Nagar, Jodhpur, Rajasthan 342008. Bring notebook, pen, water, and trekking footwear. Everything else is meant to be discovered.",
+    "LOCATION:Kailana Circle, Kabir Nagar, Jodhpur, Rajasthan 342008",
     "DTSTART:20260927T050000",
     "DTEND:20260927T090000",
     "STATUS:CONFIRMED",
@@ -31,9 +31,9 @@ export function generateIcsFile(): void {
 export function getGoogleCalendarUrl(): string {
   const title = encodeURIComponent("The Traveller — Morning Experience");
   const details = encodeURIComponent(
-    "The trail begins before the sun rises. Reporting sharp at 5:00 AM at Kaylana Chouraha. Bring notebook, pen, water, and trekking footwear. Everything else is meant to be discovered."
+    "The trail begins before the sun rises. Reporting sharp at 5:00 AM at Kailana Circle, Kabir Nagar, Jodhpur, Rajasthan 342008. Bring notebook, pen, water, and trekking footwear. Everything else is meant to be discovered."
   );
-  const location = encodeURIComponent("Kaylana Chouraha, Jodhpur");
+  const location = encodeURIComponent("Kailana Circle, Kabir Nagar, Jodhpur, Rajasthan 342008");
   // UTC or local formatted for GCal: 20260927T050000/20260927T090000
   const dates = "20260927T050000/20260927T090000";
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
