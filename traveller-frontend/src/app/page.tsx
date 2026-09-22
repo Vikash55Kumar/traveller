@@ -2,7 +2,6 @@ import React from "react";
 import Navigation from "@/components/navigation/Navigation";
 import HeroSection from "@/components/hero/HeroSection";
 import QuestionSection from "@/components/philosophy/QuestionSection";
-import TopographicMap from "@/components/terrain/TopographicMap";
 import MorningSection from "@/components/morning/MorningSection";
 import UnknownSection from "@/components/unknown/UnknownSection";
 import EssentialsSection from "@/components/essentials/EssentialsSection";
@@ -22,7 +21,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <QuestionSection />
-        <TopographicMap />
         <MorningSection />
         <UnknownSection />
         <EssentialsSection />
