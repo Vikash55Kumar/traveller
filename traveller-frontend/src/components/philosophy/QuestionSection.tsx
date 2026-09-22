@@ -1,45 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
 import { motion } from "framer-motion";
 import { experience } from "@/content/experience";
 import WordReveal from "@/components/ui/WordReveal";
 
 export default function QuestionSection() {
   const { question } = experience;
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
-
-  const steps = [
-    {
-      num: "I",
-      title: "You walk.",
-      desc: "Pacing the cold sandstone before sunlight.",
-      image: "/images/walk-trail.jpg",
-      time: "05:15 AM",
-    },
-    {
-      num: "II",
-      title: "You look.",
-      desc: "Eyes adjusting to silhouettes in the blue hour.",
-      image: "/images/morning-mist.jpg",
-      time: "05:35 AM",
-    },
-    {
-      num: "III",
-      title: "You listen.",
-      desc: "The breath of the desert before the city awakens.",
-      image: "/images/observe-light.jpg",
-      time: "05:55 AM",
-    },
-    {
-      num: "IV",
-      title: "You pause.",
-      desc: "The silent interval between one step and the next.",
-      image: "/images/horizon-sunrise.jpg",
-      time: "06:10 AM",
-    },
-  ];
 
   return (
     <section className="relative w-full bg-gradient-to-b from-[#08090C] via-[#0B101E] to-[#0A1220] py-36 sm:py-52 px-6 sm:px-10 overflow-hidden">
@@ -122,63 +89,6 @@ export default function QuestionSection() {
               {question.reflection2}
             </p>
           </motion.div>
-        </div>
-
-        {/* The 4 Milestones: Interactive Photographic Cards */}
-        <div className="space-y-6 my-20">
-          <div className="flex items-center justify-between text-xs font-mono text-[#A2A7B0] pb-4 border-b border-white/[0.06]">
-            <span>THE PACING {"//"} 04 PHASES OF DAWN</span>
-            <span>EXPERIENCED IN SILENCE</span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((step, idx) => (
-              <motion.div
-                key={step.num}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-5% 0px" }}
-                transition={{ duration: 0.8, delay: idx * 0.14 }}
-                onMouseEnter={() => setHoveredStep(idx)}
-                onMouseLeave={() => setHoveredStep(null)}
-                className={`group relative h-[360px] sm:h-[420px] rounded-2xl overflow-hidden border border-white/[0.08] hover:border-[#E2BA72]/60 bg-[#07090E] transition-all duration-500 flex flex-col justify-between p-6 sm:p-8 cursor-default shadow-2xl ${
-                  hoveredStep !== null && hoveredStep !== idx ? "opacity-50 scale-[0.98]" : "opacity-100 scale-100"
-                }`}
-              >
-                {/* Background Image with Dark Vignette */}
-                <div className="absolute inset-0 z-0">
-                  <Image
-                    src={step.image}
-                    alt={step.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover object-center brightness-50 group-hover:brightness-75 group-hover:scale-105 transition-all duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#08090C] via-[#08090C]/40 to-transparent" />
-                </div>
-
-                {/* Top Step Metadata */}
-                <div className="relative z-10 flex items-center justify-between">
-                  <span className="font-mono text-xs text-[#E2BA72] font-semibold tracking-wider">
-                    PHASE {step.num}
-                  </span>
-                  <span className="font-mono text-[10px] text-[#A2A7B0] tracking-widest">
-                    {step.time}
-                  </span>
-                </div>
-
-                {/* Bottom Step Content */}
-                <div className="relative z-10 space-y-2">
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#F8F6F0] font-normal group-hover:text-[#F3D089] transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#A2A7B0] font-light leading-relaxed">
-                    {step.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
 
         {/* The Revelation Sanctum */}
