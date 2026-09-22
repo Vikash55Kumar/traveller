@@ -36,17 +36,8 @@ export interface ExperienceData {
     label: string;
     title: string;
     subtitle: string;
-    fragments: string[];
-    arrival: {
-      time: string;
-      label: string;
-    };
-    departure: {
-      time: string;
-      label: string;
-    };
-    discoverNote: string;
-    movements?: Array<{
+    lead: string;
+    movements: Array<{
       id: string;
       word: string;
       roman: string;
@@ -55,17 +46,10 @@ export interface ExperienceData {
       tag: string;
       glyph: "pulse" | "aperture" | "zenith" | "labyrinth";
     }>;
-    dawnHours?: Array<{
-      time: string;
-      phase: string;
-      temperature: string;
-      lightLevel: string;
-      skyState: string;
-      poeticNote: string;
-    }>;
-    specs?: Array<{
+    discoverNote: string;
+    principles: Array<{
       label: string;
-      value: string;
+      text: string;
     }>;
   };
   unknown: {
@@ -131,7 +115,7 @@ export const experience: ExperienceData = {
   meta: {
     title: "The Traveller — A Morning of Walking, Observation & Questions",
     description:
-      "A four-hour morning experience beginning at 5 AM at Kaylana Chouraha. Come prepared. The rest is meant to be discovered.",
+      "A quiet morning walk of observation and inquiry beginning at Kaylana Chouraha. Come prepared. The rest is meant to be discovered.",
     locationName: "Kaylana Chouraha, Jodhpur",
     mapsUrl: "https://maps.google.com/?q=Kaylana+Chouraha+Jodhpur",
   },
@@ -148,9 +132,9 @@ export const experience: ExperienceData = {
     quoteLine1: "We all travel.",
     quoteLine2: "Somewhere along the way, we forget the traveller.",
     date: "SUNDAY",
-    time: "05:00 AM — 09:00 AM",
+    time: "AT FIRST LIGHT",
     location: "Kaylana Chouraha",
-    reporting: "Sharp 5:00 AM",
+    reporting: "05:00 AM",
     scrollPrompt: "SCROLL TO BEGIN",
   },
   question: {
@@ -172,24 +156,15 @@ export const experience: ExperienceData = {
   },
   morning: {
     label: "THE MORNING",
-    title: "BETWEEN 5 AM AND 9 AM",
-    subtitle: "What happens between the first step and the last?",
-    fragments: ["WALK", "OBSERVE", "PAUSE", "QUESTION"],
-    arrival: {
-      time: "05:00",
-      label: "ARRIVE",
-    },
-    departure: {
-      time: "09:00",
-      label: "LEAVE",
-    },
-    discoverNote: "Everything between those two moments is yours to discover.",
+    title: "BEFORE THE CITY WAKES",
+    subtitle: "A quiet space between the stillness of night and the noise of the day.",
+    lead: "There is a brief window before the world demands your attention. No agenda. No destinations to check off. Just the open earth, the early air, and room to be present.",
     movements: [
       {
         id: "01",
         word: "WALK",
         roman: "I",
-        subtitle: "Rhythm Over Destination",
+        subtitle: "Movement without destination.",
         description:
           "Moving without an agenda. The pace is unhurried, allowing thought to detach from urgency and sync with the cadence of boots against stone.",
         tag: "CADENCE & EMBODIMENT",
@@ -199,9 +174,9 @@ export const experience: ExperienceData = {
         id: "02",
         word: "OBSERVE",
         roman: "II",
-        subtitle: "Perception Without Evaluation",
+        subtitle: "Looking without naming.",
         description:
-          "Notice the cold sting of air on knuckles, the shifting mineral ochre of the escarpment, and the horizon changing hue long before the sun appears.",
+          "Notice the cool air on your skin, the shifting mineral tones of ancient sandstone, and the horizon changing hue long before the sun appears.",
         tag: "SENSORY ATTUNEMENT",
         glyph: "aperture",
       },
@@ -209,7 +184,7 @@ export const experience: ExperienceData = {
         id: "03",
         word: "PAUSE",
         roman: "III",
-        subtitle: "Stillness Without Purpose",
+        subtitle: "Stillness without purpose.",
         description:
           "Stand when you need to stand. Sit when you need to sit. No instructor, no timer, no performance metrics. Inhabiting pure silence.",
         tag: "SACRED CESSATION",
@@ -219,56 +194,27 @@ export const experience: ExperienceData = {
         id: "04",
         word: "QUESTION",
         roman: "IV",
-        subtitle: "Inquiry Without Resolution",
+        subtitle: "Wonder without urgency.",
         description:
-          "The questions that awaken in the pre-dawn wind are not the ones you answer at an office desk. You do not solve them; you carry them.",
+          "The inquiries that awaken in the pre-dawn silence are not the ones you answer at an office desk. You do not solve them; you simply carry them.",
         tag: "UNANSWERED TRUTH",
         glyph: "labyrinth",
       },
     ],
-    dawnHours: [
+    discoverNote: "Everything between the first step and the last is yours to discover.",
+    principles: [
       {
-        time: "05:00 AM",
-        phase: "Nautical Twilight",
-        temperature: "14°C Crisp Air",
-        lightLevel: "6%",
-        skyState: "Obsidian Indigo",
-        poeticNote:
-          "The horizon is still a rumor. The city sleeps below. Pure silence fills the darkness.",
+        label: "SILENCE",
+        text: "Spoken words are rare and deliberate. Let the morning speak first.",
       },
       {
-        time: "06:15 AM",
-        phase: "Astronomical Blue Hour",
-        temperature: "16°C Fresh Breeze",
-        lightLevel: "32%",
-        skyState: "Deep Cobalt & Pale Violet",
-        poeticNote:
-          "Light without shadows. The silhouettes of ancient escarpment stones quietly emerge.",
+        label: "SOLITUDE TOGETHER",
+        text: "Walking alongside others, yet entirely at ease within your own mind.",
       },
       {
-        time: "07:30 AM",
-        phase: "Solar Rim Ascent",
-        temperature: "20°C Golden Warming",
-        lightLevel: "74%",
-        skyState: "Liquid Amber & Sandstone Ochre",
-        poeticNote:
-          "The first golden ray crests the plateau. Long shadows stretch. Sandstone warms underfoot.",
+        label: "DISCOVERY",
+        text: "Nothing is rehearsed. The trail unfolds one step at a time.",
       },
-      {
-        time: "08:45 AM",
-        phase: "Morning Horizon",
-        temperature: "23°C Radiant Clarity",
-        lightLevel: "96%",
-        skyState: "Alabaster Sunlit Sky",
-        poeticNote:
-          "The four hours conclude. Clarity settled in the mind. You return to the world unhurried.",
-      },
-    ],
-    specs: [
-      { label: "DURATION", value: "240 Unbroken Minutes" },
-      { label: "PACING", value: "Organic & Self-Regulated" },
-      { label: "CONVERSATION", value: "Optional & Rare" },
-      { label: "ROUTE & AGENDA", value: "Unrevealed by Design" },
     ],
   },
   unknown: {
@@ -297,14 +243,14 @@ export const experience: ExperienceData = {
     title: "JUST COME PREPARED.",
     columns: [
       {
-        tag: "WHEN",
-        title: "Sunday Morning",
-        details: "05:00 AM – 09:00 AM",
+        tag: "SCHEDULE",
+        title: "Sunday Dawn",
+        details: "Gathering before sunrise · Returning by mid-morning",
       },
       {
-        tag: "WHERE",
+        tag: "LOCATION",
         title: "Kaylana Chouraha",
-        details: "Reporting: Sharp 5:00 AM",
+        details: "Reporting at 05:00 AM sharp",
         action: {
           label: "OPEN LOCATION →",
           href: "https://maps.google.com/?q=Kaylana+Chouraha+Jodhpur",
@@ -358,7 +304,7 @@ export const experience: ExperienceData = {
       "You don't need to know what comes next.",
       "Just arrive.",
     ],
-    ctaTime: "At 5 AM.",
+    ctaTime: "Before First Light.",
     actionLabel: "SAVE THE MORNING",
   },
   final: {
