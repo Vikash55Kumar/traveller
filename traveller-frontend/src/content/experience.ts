@@ -4,6 +4,7 @@ export interface ExperienceData {
     description: string;
     locationName: string;
     mapsUrl: string;
+    googleFormUrl: string;
   };
   navigation: {
     brand: string;
@@ -139,6 +140,7 @@ export const experience: ExperienceData = {
       "A quiet morning walk of observation and inquiry beginning at Kailana Circle, Kabir Nagar, Jodhpur. Come prepared. The rest is meant to be discovered.",
     locationName: "Kailana Circle, Kabir Nagar, Jodhpur, Rajasthan 342008",
     mapsUrl: "https://maps.google.com/?q=Kailana+Circle,+Kabir+Nagar,+Jodhpur,+Rajasthan+342008",
+    googleFormUrl: "https://forms.google.com",
   },
   navigation: {
     brand: "THE TRAVELLER",

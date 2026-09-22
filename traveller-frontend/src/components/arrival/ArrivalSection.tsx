@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, CheckCircle2, ArrowRight } from "lucide-react";
+import { Calendar, CheckCircle2, ArrowUpRight, MapPin, ClipboardList } from "lucide-react";
 import { experience } from "@/content/experience";
 import { generateIcsFile, getGoogleCalendarUrl } from "@/lib/calendar";
 
@@ -96,43 +96,77 @@ export default function ArrivalSection() {
           </div>
 
           {/* Actions */}
-          {!saved ? (
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="space-y-3.5">
+            {/* Primary Row: Google Form Link & Map Location */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <a
+                href={experience.meta.googleFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-4 rounded-full bg-[#E2BA72] text-[#08090C] font-semibold text-xs tracking-[0.2em] uppercase hover:bg-[#F3D089] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:shadow-[#E2BA72]/20 group"
+              >
+                <ClipboardList size={15} />
+                <span>GOOGLE FORM LINK</span>
+                <ArrowUpRight
+                  size={14}
+                  className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                />
+              </a>
+
+              <a
+                href={experience.meta.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-4 rounded-full bg-white/[0.04] text-[#F8F6F0] border border-[#E2BA72]/30 hover:border-[#E2BA72] hover:bg-white/[0.08] text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2 group"
+              >
+                <MapPin size={15} className="text-[#E2BA72]" />
+                <span>MAP LOCATION</span>
+                <ArrowUpRight
+                  size={14}
+                  className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                />
+              </a>
+            </div>
+
+            {/* Secondary Row: Calendar Options */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <a
+                href={getGoogleCalendarUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setSaved(true)}
+                className="px-5 py-3 rounded-full bg-white/[0.02] text-[#A2A7B0] hover:text-[#F8F6F0] border border-white/10 hover:border-white/20 text-[11px] tracking-[0.18em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Calendar size={13} className="text-[#E2BA72]" />
+                <span>GOOGLE CALENDAR</span>
+              </a>
+
               <button
                 type="button"
                 onClick={() => {
                   generateIcsFile();
                   setSaved(true);
                 }}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#E2BA72] text-[#08090C] font-medium text-xs tracking-[0.25em] uppercase hover:bg-[#F3D089] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:shadow-[#E2BA72]/20"
+                className="px-5 py-3 rounded-full bg-white/[0.02] text-[#A2A7B0] hover:text-[#F8F6F0] border border-white/10 hover:border-white/20 text-[11px] tracking-[0.18em] uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Calendar size={14} />
+                <Calendar size={13} />
                 <span>SAVE TO CALENDAR (.ICS)</span>
               </button>
-
-              <a
-                href={getGoogleCalendarUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setSaved(true)}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white/[0.04] text-[#F8F6F0] border border-white/10 hover:border-white/25 hover:bg-white/[0.08] text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <span>GOOGLE CALENDAR</span>
-                <ArrowRight size={13} />
-              </a>
             </div>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="flex items-center justify-center gap-3 py-2 text-[#E2BA72]"
-            >
-              <CheckCircle2 size={18} />
-              <span className="text-xs font-mono tracking-widest uppercase">
-                PASS CONFIRMED // SEE YOU AT 5:00 AM
-              </span>
-            </motion.div>
-          )}
+
+            {saved && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex items-center justify-center gap-2 pt-2 text-[#E2BA72]"
+              >
+                <CheckCircle2 size={16} />
+                <span className="text-[11px] font-mono tracking-widest uppercase">
+                  CALENDAR INVITE SAVED // SEE YOU AT 05:00 AM
+                </span>
+              </motion.div>
+            )}
+          </div>
         </motion.div>
       </div>
     </section>
