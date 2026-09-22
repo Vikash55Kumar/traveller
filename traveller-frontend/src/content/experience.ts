@@ -46,6 +46,27 @@ export interface ExperienceData {
       label: string;
     };
     discoverNote: string;
+    movements?: Array<{
+      id: string;
+      word: string;
+      roman: string;
+      subtitle: string;
+      description: string;
+      tag: string;
+      glyph: "pulse" | "aperture" | "zenith" | "labyrinth";
+    }>;
+    dawnHours?: Array<{
+      time: string;
+      phase: string;
+      temperature: string;
+      lightLevel: string;
+      skyState: string;
+      poeticNote: string;
+    }>;
+    specs?: Array<{
+      label: string;
+      value: string;
+    }>;
   };
   unknown: {
     label: string;
@@ -163,6 +184,92 @@ export const experience: ExperienceData = {
       label: "LEAVE",
     },
     discoverNote: "Everything between those two moments is yours to discover.",
+    movements: [
+      {
+        id: "01",
+        word: "WALK",
+        roman: "I",
+        subtitle: "Rhythm Over Destination",
+        description:
+          "Moving without an agenda. The pace is unhurried, allowing thought to detach from urgency and sync with the cadence of boots against stone.",
+        tag: "CADENCE & EMBODIMENT",
+        glyph: "pulse",
+      },
+      {
+        id: "02",
+        word: "OBSERVE",
+        roman: "II",
+        subtitle: "Perception Without Evaluation",
+        description:
+          "Notice the cold sting of air on knuckles, the shifting mineral ochre of the escarpment, and the horizon changing hue long before the sun appears.",
+        tag: "SENSORY ATTUNEMENT",
+        glyph: "aperture",
+      },
+      {
+        id: "03",
+        word: "PAUSE",
+        roman: "III",
+        subtitle: "Stillness Without Purpose",
+        description:
+          "Stand when you need to stand. Sit when you need to sit. No instructor, no timer, no performance metrics. Inhabiting pure silence.",
+        tag: "SACRED CESSATION",
+        glyph: "zenith",
+      },
+      {
+        id: "04",
+        word: "QUESTION",
+        roman: "IV",
+        subtitle: "Inquiry Without Resolution",
+        description:
+          "The questions that awaken in the pre-dawn wind are not the ones you answer at an office desk. You do not solve them; you carry them.",
+        tag: "UNANSWERED TRUTH",
+        glyph: "labyrinth",
+      },
+    ],
+    dawnHours: [
+      {
+        time: "05:00 AM",
+        phase: "Nautical Twilight",
+        temperature: "14°C Crisp Air",
+        lightLevel: "6%",
+        skyState: "Obsidian Indigo",
+        poeticNote:
+          "The horizon is still a rumor. The city sleeps below. Pure silence fills the darkness.",
+      },
+      {
+        time: "06:15 AM",
+        phase: "Astronomical Blue Hour",
+        temperature: "16°C Fresh Breeze",
+        lightLevel: "32%",
+        skyState: "Deep Cobalt & Pale Violet",
+        poeticNote:
+          "Light without shadows. The silhouettes of ancient escarpment stones quietly emerge.",
+      },
+      {
+        time: "07:30 AM",
+        phase: "Solar Rim Ascent",
+        temperature: "20°C Golden Warming",
+        lightLevel: "74%",
+        skyState: "Liquid Amber & Sandstone Ochre",
+        poeticNote:
+          "The first golden ray crests the plateau. Long shadows stretch. Sandstone warms underfoot.",
+      },
+      {
+        time: "08:45 AM",
+        phase: "Morning Horizon",
+        temperature: "23°C Radiant Clarity",
+        lightLevel: "96%",
+        skyState: "Alabaster Sunlit Sky",
+        poeticNote:
+          "The four hours conclude. Clarity settled in the mind. You return to the world unhurried.",
+      },
+    ],
+    specs: [
+      { label: "DURATION", value: "240 Unbroken Minutes" },
+      { label: "PACING", value: "Organic & Self-Regulated" },
+      { label: "CONVERSATION", value: "Optional & Rare" },
+      { label: "ROUTE & AGENDA", value: "Unrevealed by Design" },
+    ],
   },
   unknown: {
     label: "THE UNKNOWN",
