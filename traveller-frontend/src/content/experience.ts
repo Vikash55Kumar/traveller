@@ -142,7 +142,7 @@ export const experience: ExperienceData = {
     description:
       "A quiet morning walk of observation and inquiry beginning at Kailana Circle, Kabir Nagar, Jodhpur. Come prepared. The rest is meant to be discovered.",
     locationName: "Kailana Circle, Kabir Nagar, Jodhpur, Rajasthan 342008",
-    mapsUrl: "https://maps.google.com/?q=Kailana+Circle,+Kabir+Nagar,+Jodhpur,+Rajasthan+342008",
+    mapsUrl: "https://maps.app.goo.gl/GuVVAgjnAJmwZLkx6?g_st=aw",
     googleFormUrl: "https://forms.google.com",
   },
   navigation: {
@@ -333,7 +333,7 @@ export const experience: ExperienceData = {
         imageAlt: "Kailana Circle lake escarpment near Kabir Nagar Jodhpur in pre-dawn blue hour mist",
         action: {
           label: "OPEN LOCATION →",
-          href: "https://maps.google.com/?q=Kailana+Circle,+Kabir+Nagar,+Jodhpur,+Rajasthan+342008",
+          href: "https://maps.app.goo.gl/GuVVAgjnAJmwZLkx6?g_st=aw",
         },
       },
       {
