@@ -13,15 +13,15 @@ export default function FinalSection() {
       {/* Background Dawn Horizon Image */}
       <div className="absolute inset-0 z-0 select-none">
         <Image
-          src="/images/horizon-sunrise.jpg"
-          alt="Warm golden sunrise horizon breaking over mountain silhouettes"
+          src="/images/jodhpur-horizon.jpg"
+          alt="Atmospheric first light of dawn over Kailana lake escarpment and distant Mehrangarh ridge in Jodhpur"
           fill
           sizes="100vw"
-          className="object-cover object-center scale-[1.02]"
+          className="object-cover object-center scale-[1.02] brightness-90 contrast-[1.05]"
         />
         {/* Cinematic gradient transitions */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#05070D] via-[#05070D]/70 to-[#05070D]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#D7A85B]/20 via-transparent to-transparent mix-blend-screen" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#05070D] via-[#05070D]/65 to-[#05070D]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#D7A85B]/15 via-transparent to-transparent mix-blend-screen" />
       </div>
 
       <div className="max-w-[1000px] w-full mx-auto text-center relative z-10 my-auto">
