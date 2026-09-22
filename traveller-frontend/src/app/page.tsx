@@ -21,7 +21,7 @@ export default function Home() {
         <HeroSection />
         <QuestionSection />
         <MorningSection />
-        <UnknownSection />
+        {/* <UnknownSection /> */}
         <EssentialsSection />
         <NotebookSection />
         <ArrivalSection />

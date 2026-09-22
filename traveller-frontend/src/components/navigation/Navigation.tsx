@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { navigation, meta } = experience;
+  const { navigation } = experience;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -115,16 +115,6 @@ export default function Navigation() {
                   <ArrowUpRight size={13} />
                 </a>
 
-                <a
-                  href={meta.googleFormUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="w-full py-3 rounded-full bg-white/[0.04] border border-[#E2BA72]/30 text-[#F8F6F0] text-xs font-mono tracking-widest uppercase flex items-center justify-center gap-2"
-                >
-                  <span>RSVP VIA GOOGLE FORM</span>
-                  <ArrowUpRight size={13} className="text-[#E2BA72]" />
-                </a>
               </div>
             </div>
           </motion.div>
