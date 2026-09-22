@@ -85,6 +85,8 @@ export interface ExperienceData {
       tag: string;
       title: string;
       details: string;
+      image?: string;
+      imageAlt?: string;
       action?: {
         label: string;
         href: string;
@@ -309,11 +311,15 @@ export const experience: ExperienceData = {
         tag: "SCHEDULE",
         title: "Sunday Dawn",
         details: "Gathering before sunrise · Returning by mid-morning",
+        image: "/images/practical-schedule.jpg",
+        imageAlt: "Atmospheric pre-dawn desert horizon with faint starlight and golden sunrise rim",
       },
       {
         tag: "LOCATION",
         title: "Kaylana Chouraha",
         details: "Reporting at 05:00 AM sharp",
+        image: "/images/practical-location.jpg",
+        imageAlt: "Kaylana Lake escarpment shoreline near Jodhpur in pre-dawn blue hour mist",
         action: {
           label: "OPEN LOCATION →",
           href: "https://maps.google.com/?q=Kaylana+Chouraha+Jodhpur",
@@ -323,11 +329,15 @@ export const experience: ExperienceData = {
         tag: "CARRY",
         title: "Notebook & Pen",
         details: "Water (at least 1 Litre)",
+        image: "/images/practical-carry.jpg",
+        imageAlt: "Field journal leather notebook, brass pen, and black canteen on desert sandstone",
       },
       {
         tag: "WEAR",
         title: "Comfortable Clothing",
         details: "Suitable trekking footwear",
+        image: "/images/practical-wear.jpg",
+        imageAlt: "Rugged trail boots and durable trekking trousers standing on desert sandstone rock at sunrise",
       },
     ],
   },
