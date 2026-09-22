@@ -151,11 +151,9 @@ export const experience: ExperienceData = {
     time: "05:00 AM",
     links: [
       { label: "THE MORNING", href: "#the-morning" },
-      { label: "THE UNKNOWN", href: "#the-unknown" },
       { label: "PRACTICAL", href: "#essentials" },
-      { label: "THE COMPANION", href: "#the-companion" },
     ],
-    cta: { label: "EXPEDITION PASS", href: "#arrival" },
+    cta: { label: "Google Form Link", href: "#arrival" },
   },
   hero: {
     eyebrow: "A MORNING EXPERIENCE",

@@ -9,7 +9,7 @@ export default function QuestionSection() {
   const { question } = experience;
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#08090C] via-[#0B101E] to-[#0A1220] py-36 sm:py-52 px-6 sm:px-10 overflow-hidden">
+    <section className="relative w-full bg-gradient-to-b from-[#08090C] via-[#0B101E] to-[#0A1220] pb-36 sm:pb-52 pt-32 px-6 sm:px-10 overflow-hidden">
       {/* Background Celestial Astrolabe Dial */}
       <div
         aria-hidden="true"

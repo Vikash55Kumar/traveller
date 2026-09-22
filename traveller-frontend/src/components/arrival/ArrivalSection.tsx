@@ -2,16 +2,14 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, CheckCircle2, ArrowUpRight, MapPin, ClipboardList } from "lucide-react";
+import { ArrowUpRight, MapPin, ClipboardList } from "lucide-react";
 import { experience } from "@/content/experience";
-import { generateIcsFile, getGoogleCalendarUrl } from "@/lib/calendar";
 
 export default function ArrivalSection() {
   const { arrival } = experience;
-  const [saved, setSaved] = useState(false);
 
   return (
-    <section id="arrival" className="relative w-full bg-gradient-to-b from-[#0E0B09] via-[#080B14] to-[#05070D] py-36 sm:py-56 px-6 sm:px-10 overflow-hidden border-t border-white/[0.05]">
+    <section id="arrival" className="relative w-full bg-gradient-to-b from-[#0E0B09] via-[#080B14] to-[#05070D] pt-36 px-6 sm:px-10 overflow-hidden border-t border-white/[0.05]">
       <div className="max-w-[1000px] mx-auto text-center relative z-10">
         <div className="mb-12 sm:mb-16">
           <span className="text-[11px] tracking-[0.35em] text-[#E2BA72] uppercase font-light">
@@ -24,7 +22,7 @@ export default function ArrivalSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
           transition={{ duration: 1 }}
-          className="space-y-8 "
+          className="space-y-8 mb-20 sm:mb-28"
         >
           <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-[#F8F6F0] tracking-tight leading-[0.98]">
             {arrival.title}
@@ -127,46 +125,6 @@ export default function ArrivalSection() {
                 />
               </a>
             </div>
-
-            {/* Secondary Calendar Actions */}
-            <div className="flex items-center justify-center gap-4 pt-2 border-t border-white/[0.06]">
-              <a
-                href={getGoogleCalendarUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setSaved(true)}
-                className="text-[11px] font-mono tracking-wider text-[#A2A7B0] hover:text-[#E2BA72] transition-colors flex items-center gap-1.5"
-              >
-                <Calendar size={12} className="text-[#E2BA72]" />
-                <span>GOOGLE CALENDAR</span>
-              </a>
-
-              <span className="text-white/20">·</span>
-
-              <button
-                type="button"
-                onClick={() => {
-                  generateIcsFile();
-                  setSaved(true);
-                }}
-                className="text-[11px] font-mono tracking-wider text-[#A2A7B0] hover:text-[#E2BA72] transition-colors flex items-center gap-1.5 cursor-pointer"
-              >
-                <span>SAVE .ICS FILE</span>
-              </button>
-            </div>
-
-            {saved && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="flex items-center justify-center gap-2 pt-1 text-[#E2BA72]"
-              >
-                <CheckCircle2 size={14} />
-                <span className="text-[10px] font-mono tracking-widest uppercase">
-                  CALENDAR INVITE SAVED // SEE YOU AT 05:00 AM
-                </span>
-              </motion.div>
-            )}
           </div>
         </motion.div>
       </div>

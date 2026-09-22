@@ -158,38 +158,6 @@ export default function NotebookSection() {
             </motion.div>
           </div>
         </div>
-
-        {/* Companion Specifications Ledger */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9 }}
-          className="rounded-2xl border border-[#E2BA72]/20 bg-[#110D0B]/90 backdrop-blur-md p-8 sm:p-10 shadow-2xl relative"
-        >
-          {/* Top Gold Horizon Hairline */}
-          <div className="absolute top-0 inset-x-8 sm:inset-x-12 h-[1px] bg-gradient-to-r from-transparent via-[#E2BA72]/40 to-transparent" />
-
-          <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/[0.06]">
-            <BookOpen className="w-4 h-4 text-[#E2BA72]" />
-            <span className="text-[10px] font-mono tracking-[0.25em] text-[#E2BA72] uppercase font-medium">
-              NOTEBOOK RECOMMENDATIONS
-            </span>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {specs.map((spec) => (
-              <div key={spec.label} className="space-y-1">
-                <span className="text-[10px] font-mono tracking-[0.2em] text-[#A2A7B0] uppercase block">
-                  {spec.label}
-                </span>
-                <span className="text-xs sm:text-sm text-[#F8F6F0] font-light block">
-                  {spec.value}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

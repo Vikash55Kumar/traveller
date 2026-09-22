@@ -42,11 +42,6 @@ export default function Navigation() {
           <span className="text-xs sm:text-sm tracking-[0.28em] font-medium text-[#F8F6F0] group-hover:text-[#E2BA72] transition-colors duration-300 uppercase">
             {navigation.brand}
           </span>
-          <span className="hidden sm:inline-block w-[1px] h-3 bg-white/20" />
-          <span className="hidden sm:flex items-center gap-1.5 text-[10px] font-mono tracking-widest text-[#A2A7B0] group-hover:text-[#F3D089] transition-colors">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#E2BA72] animate-pulse" />
-            {navigation.city} · {navigation.time}
-          </span>
         </a>
 
         {/* Desktop Navigation Links */}
@@ -96,10 +91,6 @@ export default function Navigation() {
             className="md:hidden bg-[#07090F]/95 backdrop-blur-2xl border-b border-white/[0.08] px-6 py-8 overflow-hidden"
           >
             <div className="space-y-5">
-              <div className="flex items-center gap-2 pb-4 border-b border-white/[0.06] text-xs font-mono text-[#E2BA72]">
-                <MapPin size={13} />
-                <span>KAILANA CIRCLE, JODHPUR · 05:00 AM</span>
-              </div>
 
               <div className="flex flex-col space-y-4">
                 {navigation.links.map((link) => (
@@ -120,7 +111,7 @@ export default function Navigation() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full py-3 rounded-full bg-[#E2BA72] text-[#08090C] text-xs font-mono tracking-widest uppercase font-medium flex items-center justify-center gap-2"
                 >
-                  <span>EXPEDITION PASS</span>
+                  <span>Google Form Link</span>
                   <ArrowUpRight size={13} />
                 </a>
 
