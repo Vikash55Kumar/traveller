@@ -3,96 +3,66 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { experience } from "@/content/experience";
-import SectionLabel from "@/components/ui/SectionLabel";
 
 export default function ChecklistSection() {
-  const { preparation } = experience;
+  const { checklist } = experience;
 
   return (
-    <section className="relative w-full bg-[#0C1424] py-32 sm:py-44 px-6 sm:px-10 border-t border-white/[0.04]">
-      <div className="max-w-[1140px] mx-auto relative z-10">
-        <div className="flex justify-between items-center pb-8 border-b border-white/[0.06] mb-16 sm:mb-24">
-          <SectionLabel label={preparation.label} number={preparation.number} />
-          <span className="font-mono text-[10px] tracking-[0.25em] text-[#777A7D] uppercase hidden sm:inline-block">
-            EQUIPMENT AUDIT {"//"} DEPARTURE WEIGHT
+    <section className="relative w-full bg-gradient-to-b from-[#0D1524] via-[#0A101C] to-[#080D17] py-32 sm:py-44 px-6 sm:px-10 border-t border-white/[0.04]">
+      <div className="max-w-[1100px] mx-auto relative z-10">
+        <div className="mb-12 sm:mb-16">
+          <span className="tracking-[0.35em] text-[11px] sm:text-xs text-[#D7A85B] uppercase font-light">
+            {checklist.label}
           </span>
         </div>
 
         <div className="mb-20">
           <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-normal text-[#F4F1EA]">
-            {preparation.title}
+            {checklist.title}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-          {/* Column 1: Tangible Load */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+          {/* Column 1: Essential items */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <div className="flex items-center justify-between pb-3 border-b border-[#D7A85B]/40">
-              <span className="font-mono text-xs tracking-[0.25em] text-[#D7A85B] uppercase font-semibold">
-                {preparation.essentialTitle}
-              </span>
-              <span className="font-mono text-[10px] text-[#777A7D]">05 SPECIFICATIONS</span>
+            <div className="text-xs tracking-[0.3em] text-[#D7A85B] uppercase font-medium pb-4 border-b border-[#D7A85B]/30">
+              {checklist.essentialTitle}
             </div>
-
-            <div className="space-y-6">
-              {preparation.essentials.map((item, idx) => (
-                <div key={idx} className="flex items-baseline justify-between gap-4 pb-4 border-b border-white/[0.05]">
-                  <div>
-                    <span className="font-serif text-xl sm:text-2xl text-[#F4F1EA] block">
-                      {item.name}
-                    </span>
-                    <span className="text-xs text-[#777A7D] font-light mt-0.5 block">
-                      {item.rationale}
-                    </span>
-                  </div>
-                  <span className="font-mono text-[10px] text-[#D7A85B]">REQ</span>
-                </div>
+            <ul className="space-y-3.5">
+              {checklist.essentials.map((item, idx) => (
+                <li key={idx} className="flex items-center gap-4 text-base sm:text-lg text-[#F4F1EA] font-light">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D7A85B]/60 shrink-0" />
+                  <span>{item}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </motion.div>
 
-          {/* Column 2: Internal Mindset Preparation */}
+          {/* Column 2: Also bring */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <div className="flex items-center justify-between pb-3 border-b border-white/20">
-              <span className="font-mono text-xs tracking-[0.25em] text-[#B8B7B2] uppercase font-semibold">
-                {preparation.mindsetTitle}
-              </span>
-              <span className="font-mono text-[10px] text-[#777A7D]">03 CONDITIONS</span>
+            <div className="text-xs tracking-[0.3em] text-[#B8B7B2] uppercase font-medium pb-4 border-b border-white/20">
+              {checklist.mindsetTitle}
             </div>
-
-            <div className="space-y-6">
-              {preparation.mindset.map((item, idx) => (
-                <div key={idx} className="flex items-baseline justify-between gap-4 pb-4 border-b border-white/[0.05]">
-                  <div>
-                    <span className="font-serif text-xl sm:text-2xl text-[#E8C27A] block">
-                      {item.name}
-                    </span>
-                    <span className="text-xs text-[#777A7D] font-light mt-0.5 block">
-                      {item.rationale}
-                    </span>
-                  </div>
-                  <span className="font-mono text-[10px] text-[#777A7D]">STATE</span>
-                </div>
+            <ul className="space-y-3.5">
+              {checklist.mindset.map((item, idx) => (
+                <li key={idx} className="flex items-center gap-4 text-base sm:text-lg text-[#B8B7B2] font-light">
+                  <span className="w-1.5 h-1.5 rounded-full bg-white/20 shrink-0" />
+                  <span>{item}</span>
+                </li>
               ))}
-            </div>
-
-            <div className="pt-6">
-              <p className="font-serif text-base sm:text-lg text-[#777A7D] font-light italic">
-                &ldquo;Leave expectations behind. They only weigh down the pack before the first ascent.&rdquo;
-              </p>
-            </div>
+            </ul>
           </motion.div>
         </div>
       </div>

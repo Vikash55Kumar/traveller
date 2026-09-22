@@ -2,9 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { experience } from "@/content/experience";
-import SectionLabel from "@/components/ui/SectionLabel";
 
 export default function EssentialsSection() {
   const { essentials } = experience;
@@ -12,89 +10,53 @@ export default function EssentialsSection() {
   return (
     <section
       id="essentials"
-      className="relative w-full bg-[#172536] py-32 sm:py-48 px-6 sm:px-10 transition-colors duration-1000 overflow-hidden"
+      className="relative w-full bg-gradient-to-b from-[#0D1526] via-[#101A2C] to-[#121F33] py-36 sm:py-52 px-6 sm:px-10 overflow-hidden"
     >
-      <div className="max-w-[1140px] mx-auto relative z-10">
-        <div className="flex justify-between items-center pb-8 border-b border-white/[0.06] mb-16 sm:mb-24">
-          <SectionLabel label={essentials.label} number={essentials.number} />
-          <span className="font-mono text-[10px] tracking-[0.25em] text-[#D7A85B] uppercase hidden sm:inline-block">
-            MANDATORY READINESS PROTOCOL
+      <div className="max-w-[1200px] mx-auto relative z-10">
+        <div className="mb-12 sm:mb-16">
+          <span className="tracking-[0.35em] text-[11px] sm:text-xs text-[#D7A85B] uppercase font-light">
+            {essentials.label}
           </span>
         </div>
 
-        <div className="max-w-[780px] mb-20 sm:mb-28">
-          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-normal text-[#F4F1EA] tracking-tight leading-[1.05]">
+        <div className="max-w-[720px] mb-24 sm:mb-32">
+          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-[#F4F1EA] tracking-tight leading-[1.05]">
             {essentials.title}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#B8B7B2] font-light max-w-xl">
-            {essentials.subtitle}
-          </p>
         </div>
 
-        {/* Architectural Field Dispatch Grid (No generic rounded icon squares) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          {essentials.dispatches.map((dispatch, idx) => (
+        {/* Minimal Editorial Columns (No rounded cards or colored badge squares) */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 pt-6 border-t border-white/[0.08]">
+          {essentials.columns.map((col, idx) => (
             <motion.div
-              key={dispatch.index}
-              initial={{ opacity: 0, y: 20 }}
+              key={col.tag}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-5% 0px" }}
               transition={{ duration: 0.8, delay: idx * 0.12 }}
-              className="group bg-[#111D30]/90 border border-white/[0.08] hover:border-[#D7A85B]/40 rounded-xl p-8 sm:p-10 flex flex-col justify-between transition-all duration-300 relative overflow-hidden"
+              className="flex flex-col justify-between space-y-8"
             >
-              {/* Subtle top indicator accent */}
-              <div className="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-[#D7A85B]/30 to-transparent" />
-
               <div>
-                <div className="flex items-center justify-between pb-6 border-b border-white/[0.06] mb-6">
-                  <div className="flex items-center gap-3">
-                    <span className="font-mono text-xs font-semibold text-[#D7A85B]">
-                      {dispatch.code}
-                    </span>
-                    <span className="w-1 h-1 rounded-full bg-white/20" />
-                    <span className="text-[11px] font-mono tracking-widest text-[#B8B7B2] uppercase">
-                      {dispatch.tag}
-                    </span>
-                  </div>
-                  <span className="font-mono text-[10px] text-[#777A7D]">
-                    REF {"//"} 0{dispatch.index}
-                  </span>
-                </div>
-
-                <div>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#F4F1EA] font-normal mb-2 group-hover:text-[#E8C27A] transition-colors">
-                    {dispatch.primary}
-                  </h3>
-                  <p className="text-sm text-[#B8B7B2] font-light leading-relaxed">
-                    {dispatch.secondary}
-                  </p>
-
-                  {dispatch.specs && (
-                    <div className="mt-6 pt-4 border-t border-white/[0.04] space-y-2">
-                      {dispatch.specs.map((spec, sIdx) => (
-                        <div key={sIdx} className="flex items-center gap-2.5 text-xs font-mono text-[#777A7D]">
-                          <span className="w-1 h-1 bg-[#D7A85B]/60 rounded-full" />
-                          <span>{spec}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <span className="tracking-[0.3em] text-[10px] text-[#D7A85B] uppercase font-medium block mb-4">
+                  {col.tag}
+                </span>
+                <h3 className="font-serif text-2xl sm:text-3xl text-[#F4F1EA] font-normal mb-2">
+                  {col.title}
+                </h3>
+                <p className="text-sm text-[#B8B7B2] font-light leading-relaxed">
+                  {col.details}
+                </p>
               </div>
 
-              {dispatch.action && (
-                <div className="mt-8 pt-6 border-t border-white/[0.06]">
+              {col.action && (
+                <div className="pt-4">
                   <a
-                    href={dispatch.action.href}
+                    href={col.action.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-mono tracking-[0.2em] font-medium text-[#D7A85B] hover:text-[#E8C27A] transition-colors uppercase group/link"
+                    className="inline-block text-xs tracking-[0.2em] font-medium text-[#D7A85B] hover:text-[#E8C27A] transition-colors uppercase border-b border-[#D7A85B]/30 pb-0.5"
                   >
-                    <span>{dispatch.action.label}</span>
-                    <ArrowUpRight
-                      size={14}
-                      className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform"
-                    />
+                    {col.action.label}
                   </a>
                 </div>
               )}
