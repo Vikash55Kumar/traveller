@@ -8,7 +8,10 @@ export interface ExperienceData {
   };
   navigation: {
     brand: string;
+    city: string;
+    time: string;
     links: Array<{ label: string; href: string }>;
+    cta: { label: string; href: string };
   };
   hero: {
     eyebrow: string;
@@ -144,10 +147,15 @@ export const experience: ExperienceData = {
   },
   navigation: {
     brand: "THE TRAVELLER",
+    city: "JODHPUR",
+    time: "05:00 AM",
     links: [
       { label: "THE MORNING", href: "#the-morning" },
-      { label: "ESSENTIALS", href: "#essentials" },
+      { label: "THE UNKNOWN", href: "#the-unknown" },
+      { label: "PRACTICAL", href: "#essentials" },
+      { label: "THE COMPANION", href: "#the-companion" },
     ],
+    cta: { label: "EXPEDITION PASS", href: "#arrival" },
   },
   hero: {
     eyebrow: "A MORNING EXPERIENCE",

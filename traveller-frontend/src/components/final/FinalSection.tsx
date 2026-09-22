@@ -9,7 +9,7 @@ export default function FinalSection() {
   const { final } = experience;
 
   return (
-    <section className="relative w-full min-h-[92vh] py-36 sm:py-52 px-6 sm:px-10 flex flex-col justify-between overflow-hidden bg-[#05070D]">
+    <section id="the-horizon" className="relative w-full min-h-[92vh] py-36 sm:py-52 px-6 sm:px-10 flex flex-col justify-between overflow-hidden bg-[#05070D]">
       {/* Background Dawn Horizon Image */}
       <div className="absolute inset-0 z-0 select-none">
         <Image

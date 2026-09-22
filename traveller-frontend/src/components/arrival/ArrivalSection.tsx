@@ -11,7 +11,7 @@ export default function ArrivalSection() {
   const [saved, setSaved] = useState(false);
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#0E0B09] via-[#080B14] to-[#05070D] py-36 sm:py-56 px-6 sm:px-10 overflow-hidden border-t border-white/[0.05]">
+    <section id="arrival" className="relative w-full bg-gradient-to-b from-[#0E0B09] via-[#080B14] to-[#05070D] py-36 sm:py-56 px-6 sm:px-10 overflow-hidden border-t border-white/[0.05]">
       <div className="max-w-[1000px] mx-auto text-center relative z-10">
         <div className="mb-12 sm:mb-16">
           <span className="text-[11px] tracking-[0.35em] text-[#E2BA72] uppercase font-light">
@@ -24,7 +24,7 @@ export default function ArrivalSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
           transition={{ duration: 1 }}
-          className="space-y-8 mb-20 sm:mb-28"
+          className="space-y-8 "
         >
           <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-[#F8F6F0] tracking-tight leading-[0.98]">
             {arrival.title}
