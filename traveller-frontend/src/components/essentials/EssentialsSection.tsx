@@ -13,7 +13,7 @@ export default function EssentialsSection() {
   return (
     <section
       id="essentials"
-      className="relative w-full bg-gradient-to-b from-[#0A101C] via-[#0D1525] to-[#101A2C] py-36 sm:py-52 px-6 sm:px-10 overflow-hidden"
+      className="relative w-full bg-gradient-to-b from-[#040507] via-[#09101E] to-[#0E1729] py-36 sm:py-52 px-6 sm:px-10 overflow-hidden border-t border-white/[0.06]"
     >
       <div className="max-w-[1200px] mx-auto relative z-10">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-8 border-b border-white/[0.08] mb-16">

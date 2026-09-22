@@ -17,14 +17,17 @@ export default function UnknownSection() {
   return (
     <section
       id="the-unknown"
-      className="relative w-full bg-[#08090C] py-32 sm:py-52 px-6 sm:px-10 overflow-hidden"
+      className="relative w-full bg-gradient-to-b from-[#050608] via-[#07080C] to-[#040507] py-36 sm:py-56 px-6 sm:px-10 overflow-hidden border-t border-white/[0.08]"
     >
-      {/* Ambient Pre-Dawn Atmospheric Glow */}
+      {/* Top Transition Border Glow */}
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#E2BA72]/30 to-transparent pointer-events-none" />
+
+      {/* Ambient Deep Obsidian Mist Glow */}
       <div
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] pointer-events-none opacity-25 blur-[140px]"
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[550px] pointer-events-none opacity-25 blur-[150px]"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(226, 186, 114, 0.16) 0%, rgba(20, 26, 44, 0.45) 50%, transparent 80%)",
+            "radial-gradient(ellipse at center, rgba(35, 30, 48, 0.5) 0%, rgba(5, 6, 8, 0.9) 60%, transparent 85%)",
         }}
       />
 
@@ -84,7 +87,7 @@ export default function UnknownSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.15 }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 sm:p-12 rounded-2xl bg-[#0A0D15]/80 border border-white/[0.08] backdrop-blur-md mb-24 sm:mb-32 shadow-2xl relative overflow-hidden"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 sm:p-12 rounded-2xl bg-[#080A0F]/90 border border-white/[0.06] backdrop-blur-md mb-24 sm:mb-32 shadow-2xl relative overflow-hidden"
         >
           {/* Subtle gold accent line */}
           <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#E2BA72]/40 to-transparent" />
@@ -140,7 +143,7 @@ export default function UnknownSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-6% 0px" }}
                 transition={{ duration: 0.8, delay: idx * 0.15 }}
-                className="group relative rounded-2xl border border-white/[0.08] bg-[#0A0D15]/80 backdrop-blur-sm p-8 flex flex-col justify-between transition-all duration-500 hover:border-[#E2BA72]/40 hover:bg-[#0E1320]/90 shadow-xl overflow-hidden"
+                className="group relative rounded-2xl border border-white/[0.06] bg-[#080A0F]/90 backdrop-blur-sm p-8 flex flex-col justify-between transition-all duration-500 hover:border-[#E2BA72]/40 hover:bg-[#0D1017] shadow-xl overflow-hidden"
               >
                 {/* Subtle Amber Glow Accent on Hover */}
                 <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-[#E2BA72]/5 blur-3xl pointer-events-none group-hover:bg-[#E2BA72]/15 transition-all duration-700" />
@@ -225,7 +228,7 @@ export default function UnknownSection() {
         {/* ------------------------------------------------------------- */}
         {/* THE FOUR UNSEEN REVELATIONS */}
         {/* ------------------------------------------------------------- */}
-        <div className="rounded-2xl border border-white/[0.08] bg-[#07090F]/90 backdrop-blur-md p-8 sm:p-12 shadow-2xl relative">
+        <div className="rounded-2xl border border-white/[0.06] bg-[#06080C]/95 backdrop-blur-md p-8 sm:p-12 shadow-2xl relative">
           {/* Top Gold Horizon Hairline */}
           <div className="absolute top-0 inset-x-8 sm:inset-x-12 h-[1px] bg-gradient-to-r from-transparent via-[#E2BA72]/40 to-transparent" />
 

@@ -13,14 +13,14 @@ export default function MorningSection() {
   return (
     <section
       id="the-morning"
-      className="relative w-full bg-[#08090C] py-32 sm:py-48 px-6 sm:px-10 overflow-hidden"
+      className="relative w-full bg-gradient-to-b from-[#0A1220] via-[#0E172A] to-[#090F1C] py-32 sm:py-48 px-6 sm:px-10 overflow-hidden"
     >
-      {/* Ambient Pre-Dawn Radial Glow */}
+      {/* Ambient Pre-Dawn Radial Glow (Warm Sunrise Rim Light) */}
       <div
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] pointer-events-none opacity-30 blur-[130px]"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[550px] pointer-events-none opacity-35 blur-[140px]"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(226, 186, 114, 0.18) 0%, rgba(20, 24, 38, 0.4) 50%, transparent 80%)",
+            "radial-gradient(ellipse at center, rgba(226, 186, 114, 0.22) 0%, rgba(14, 23, 42, 0.45) 55%, transparent 80%)",
         }}
       />
 
