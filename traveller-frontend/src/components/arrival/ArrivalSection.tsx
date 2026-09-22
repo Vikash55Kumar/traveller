@@ -11,7 +11,7 @@ export default function ArrivalSection() {
   const [saved, setSaved] = useState(false);
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#0A101C] via-[#080B14] to-[#05070D] py-36 sm:py-56 px-6 sm:px-10 overflow-hidden">
+    <section className="relative w-full bg-gradient-to-b from-[#0E0B09] via-[#080B14] to-[#05070D] py-36 sm:py-56 px-6 sm:px-10 overflow-hidden border-t border-white/[0.05]">
       <div className="max-w-[1000px] mx-auto text-center relative z-10">
         <div className="mb-12 sm:mb-16">
           <span className="text-[11px] tracking-[0.35em] text-[#E2BA72] uppercase font-light">

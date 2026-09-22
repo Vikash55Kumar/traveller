@@ -14,14 +14,17 @@ export default function NotebookSection() {
   return (
     <section
       id="the-companion"
-      className="relative w-full bg-gradient-to-b from-[#0E1729] via-[#0A111F] to-[#070B14] py-32 sm:py-48 px-6 sm:px-10 overflow-hidden border-t border-white/[0.06]"
+      className="relative w-full bg-gradient-to-b from-[#14100E] via-[#1A1411] to-[#0E0B09] py-32 sm:py-48 px-6 sm:px-10 overflow-hidden border-t border-[#E2BA72]/15"
     >
+      {/* Top Gold Horizon Hairline */}
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#E2BA72]/30 to-transparent" />
+
       {/* Ambient paper warmth glow */}
       <div
         className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[550px] pointer-events-none opacity-25 blur-[150px]"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(226, 186, 114, 0.22) 0%, rgba(14, 23, 42, 0.45) 55%, transparent 80%)",
+            "radial-gradient(ellipse at center, rgba(226, 186, 114, 0.22) 0%, rgba(38, 26, 18, 0.45) 55%, transparent 80%)",
         }}
       />
 
@@ -33,10 +36,10 @@ export default function NotebookSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex items-center gap-3 mb-5"
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#E2BA72]/10 border border-[#E2BA72]/20 mb-5"
           >
-            <span className="w-8 h-[1px] bg-[#E2BA72]" />
-            <span className="text-[11px] font-mono tracking-[0.35em] text-[#E2BA72] uppercase font-medium">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#E2BA72] animate-pulse" />
+            <span className="text-[11px] font-mono tracking-[0.3em] text-[#E2BA72] uppercase font-medium">
               {notebook.label} {"//"} ANALOG SANCTUARY
             </span>
           </motion.div>
@@ -77,7 +80,7 @@ export default function NotebookSection() {
             {/* Ambient paper warmth glow behind frame */}
             <div className="absolute -inset-4 bg-[#E2BA72]/15 rounded-3xl blur-3xl pointer-events-none group-hover:bg-[#E2BA72]/25 transition-all duration-700" />
 
-            <div className="relative h-[440px] sm:h-[540px] md:h-[600px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-[#080B12]">
+            <div className="relative h-[440px] sm:h-[540px] md:h-[600px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-[#120F0D]">
               <Image
                 src="/images/companion-journal.jpg"
                 alt="Open vintage traveler's notebook with deckled pages and brass pen resting on desert sandstone"
@@ -85,10 +88,10 @@ export default function NotebookSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center brightness-95 group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#08090C] via-[#08090C]/25 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#100D0A] via-[#100D0A]/25 to-transparent" />
 
               {/* Floating Field Inscription Badge */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#080B12]/85 backdrop-blur-md border border-white/[0.08]">
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#14100D]/90 backdrop-blur-md border border-[#E2BA72]/20">
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="text-[10px] tracking-[0.25em] text-[#E2BA72] uppercase font-mono">
                     FIELD SPECIMEN // UNLINED STOCK
@@ -123,7 +126,7 @@ export default function NotebookSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: idx * 0.12 }}
-                  className="p-6 rounded-xl bg-[#080B14]/80 border border-white/[0.06] hover:border-[#E2BA72]/30 transition-all duration-300"
+                  className="p-6 rounded-xl bg-[#130F0D]/85 border border-white/[0.07] hover:border-[#E2BA72]/35 transition-all duration-300"
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-[10px] font-mono text-[#E2BA72]">
@@ -162,7 +165,7 @@ export default function NotebookSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9 }}
-          className="rounded-2xl border border-white/[0.08] bg-[#07090F]/90 backdrop-blur-md p-8 sm:p-10 shadow-2xl relative"
+          className="rounded-2xl border border-[#E2BA72]/20 bg-[#110D0B]/90 backdrop-blur-md p-8 sm:p-10 shadow-2xl relative"
         >
           {/* Top Gold Horizon Hairline */}
           <div className="absolute top-0 inset-x-8 sm:inset-x-12 h-[1px] bg-gradient-to-r from-transparent via-[#E2BA72]/40 to-transparent" />
