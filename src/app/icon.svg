@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="8" fill="#070B14" />
+  <!-- subtle gradient glow -->
+  <circle cx="16" cy="22" r="10" fill="#D7A85B" fill-opacity="0.25" />
+  <!-- soft horizon arc -->
+  <path d="M4 22 C 10 18, 22 18, 28 22" stroke="#D7A85B" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- ascending path line -->
+  <path d="M16 26 L16 11" stroke="#F4F1EA" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- dawn star / summit point -->
+  <circle cx="16" cy="8" r="1.5" fill="#E8C27A" />
+</svg>
