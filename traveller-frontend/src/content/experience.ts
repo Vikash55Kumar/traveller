@@ -99,14 +99,6 @@ export interface ExperienceData {
     subtitle: string;
     lines: string[];
   };
-  checklist: {
-    label: string;
-    title: string;
-    essentialTitle: string;
-    essentials: string[];
-    mindsetTitle: string;
-    mindset: string[];
-  };
   arrival: {
     label: string;
     title: string;
@@ -348,24 +340,6 @@ export const experience: ExperienceData = {
     lines: [
       "You may not know yet why you'll need them.",
       "That's okay.",
-    ],
-  },
-  checklist: {
-    label: "WHAT TO CARRY",
-    title: "PREPARATION",
-    essentialTitle: "ESSENTIAL",
-    essentials: [
-      "Notebook",
-      "Pen",
-      "Water",
-      "Comfortable clothing",
-      "Suitable footwear",
-    ],
-    mindsetTitle: "ALSO BRING",
-    mindset: [
-      "Curiosity",
-      "Attention",
-      "Willingness to pause",
     ],
   },
   arrival: {

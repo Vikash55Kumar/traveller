@@ -6,7 +6,6 @@ import MorningSection from "@/components/morning/MorningSection";
 import UnknownSection from "@/components/unknown/UnknownSection";
 import EssentialsSection from "@/components/essentials/EssentialsSection";
 import NotebookSection from "@/components/notebook/NotebookSection";
-import ChecklistSection from "@/components/checklist/ChecklistSection";
 import ArrivalSection from "@/components/arrival/ArrivalSection";
 import FinalSection from "@/components/final/FinalSection";
 import MinimalFooter from "@/components/footer/MinimalFooter";
@@ -25,7 +24,6 @@ export default function Home() {
         <UnknownSection />
         <EssentialsSection />
         <NotebookSection />
-        <ChecklistSection />
         <ArrivalSection />
         <FinalSection />
       </main>

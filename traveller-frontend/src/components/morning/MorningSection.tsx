@@ -23,10 +23,10 @@ export default function MorningSection() {
           alt="Atmospheric early morning mist over Kaylana and ancient Jodhpur fortress silhouette at pre-dawn"
           fill
           sizes="100vw"
-          className="object-cover object-center scale-105 opacity-30 brightness-90 contrast-105"
+          className="object-cover object-center scale-105 opacity-90 brightness-90 contrast-105"
         />
         {/* Atmospheric Indigo Vignettes for text contrast and depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1220] via-[#0E172A]/70 to-[#090F1C]" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-[#0A1220] via-[#0E172A]/70 to-[#090F1C]" /> */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(14,23,42,0.4)_0%,rgba(9,15,28,0.92)_85%)]" />
       </div>
 
