@@ -55,8 +55,24 @@ export interface ExperienceData {
   unknown: {
     label: string;
     title: string;
+    subtitle?: string;
     paragraphs: string[];
+    manifesto?: string[];
+    sealedPillars?: Array<{
+      id: string;
+      number: string;
+      title: string;
+      tag: string;
+      question: string;
+      philosophy: string;
+      glyph: "path" | "scroll" | "horizon";
+    }>;
     fragments: Array<{
+      prefix: string;
+      line: string;
+      emphasis?: boolean;
+    }>;
+    revelations?: Array<{
       prefix: string;
       line: string;
       emphasis?: boolean;
@@ -220,20 +236,67 @@ export const experience: ExperienceData = {
   unknown: {
     label: "THE UNKNOWN",
     title: "SOME THINGS ARE BETTER DISCOVERED.",
+    subtitle: "The rare luxury of not knowing what lies ahead.",
     paragraphs: [
       "You won't find a schedule here.",
       "You won't find the route.",
       "You won't find the questions.",
       "And that's intentional.",
-      "Some experiences lose something when they're explained beforehand.",
+      "Some experiences lose something vital when they're explained beforehand.",
+    ],
+    manifesto: [
+      "In a world where every step is mapped by satellite, every view is photographed in advance, and every moment is pre-calculated, uncertainty has become a lost art.",
+      "The Traveller restores the quiet dignity of the unwritten morning. By withholding the route and the questions, we leave room for genuine discovery.",
+    ],
+    sealedPillars: [
+      {
+        id: "route",
+        number: "I",
+        title: "THE ROUTE",
+        tag: "SEALED BY DESIGN",
+        question: "Why is the trail unrevealed?",
+        philosophy:
+          "If you knew every turn in advance, your mind would walk the trail before your feet ever touched the sandstone. When the path is unknown, your attention stays entirely in the present step.",
+        glyph: "path",
+      },
+      {
+        id: "questions",
+        number: "II",
+        title: "THE INQUIRY",
+        tag: "UNSPOKEN UNTIL DAWN",
+        question: "Why are the questions kept secret?",
+        philosophy:
+          "Premature answers destroy honest questions. The prompts are designed to meet you in the quiet wind of the morning—when the noise of routine has not yet dictated your thoughts.",
+        glyph: "scroll",
+      },
+      {
+        id: "destination",
+        number: "III",
+        title: "THE HORIZON",
+        tag: "NO FINISH LINE",
+        question: "Where does the morning lead?",
+        philosophy:
+          "We do not walk to conquer a peak or tick off a milestone. The walk itself is the entire purpose. When you surrender the destination, the real journey begins.",
+        glyph: "horizon",
+      },
     ],
     fragments: [
-      { prefix: "A path", line: "you haven't seen." },
-      { prefix: "A question", line: "you haven't asked." },
-      { prefix: "A moment", line: "you didn't expect." },
+      { prefix: "A path", line: "you have passed a hundred times, yet never truly seen." },
+      { prefix: "A silence", line: "deep enough that your thoughts finally stop competing." },
+      { prefix: "A question", line: "that has waited patiently for the world to grow quiet." },
       {
         prefix: "And perhaps,",
-        line: "a glimpse of the person who has been travelling all along.",
+        line: "a rare glimpse of the person who has been travelling all along.",
+        emphasis: true,
+      },
+    ],
+    revelations: [
+      { prefix: "A PATH", line: "you have passed a hundred times, yet never truly seen." },
+      { prefix: "A SILENCE", line: "deep enough that your thoughts finally stop competing." },
+      { prefix: "A QUESTION", line: "that has waited patiently for the world to grow quiet." },
+      {
+        prefix: "AND PERHAPS",
+        line: "a rare glimpse of the person who has been travelling all along.",
         emphasis: true,
       },
     ],
