@@ -97,7 +97,18 @@ export interface ExperienceData {
     label: string;
     title: string;
     subtitle: string;
+    lead?: string;
     lines: string[];
+    disciplines?: Array<{
+      number: string;
+      title: string;
+      description: string;
+    }>;
+    specs?: Array<{
+      label: string;
+      value: string;
+    }>;
+    quote?: string;
   };
   arrival: {
     label: string;
@@ -337,10 +348,40 @@ export const experience: ExperienceData = {
     label: "THE COMPANION",
     title: "BRING A NOTEBOOK.",
     subtitle: "AND A PEN.",
+    lead:
+      "A physical surface for thoughts that vanish the moment they touch a screen. Paper has no battery, no notifications, and no backspace. It simply waits for what is true.",
     lines: [
       "You may not know yet why you'll need them.",
       "That's okay.",
+      "Some observations exist only in ink before the sun climbs.",
     ],
+    disciplines: [
+      {
+        number: "01",
+        title: "NO BACKSPACE",
+        description:
+          "Ink commits you to your first instinct. What you put down cannot be edited or polished for an audience. It remains raw, honest, and unperformed.",
+      },
+      {
+        number: "02",
+        title: "THE ANALOG SANCTUARY",
+        description:
+          "The moment you unlock a phone, a thousand algorithms compete for your attention. Paper keeps you grounded in the silence of the morning.",
+      },
+      {
+        number: "03",
+        title: "TANGIBLE MEMORY",
+        description:
+          "A thought written with your hand against cold sandstone carries weight. You return to the world with something physical to carry forward.",
+      },
+    ],
+    specs: [
+      { label: "FORMAT", value: "Pocket or Field Size" },
+      { label: "PAGES", value: "Unlined or Blank Preferred" },
+      { label: "INSTRUMENT", value: "Pen or Pencil" },
+      { label: "INTENT", value: "Observation, Not Performance" },
+    ],
+    quote: "The blank page is the only surface that never interrupts your thoughts.",
   },
   arrival: {
     label: "WHO IS THIS FOR?",

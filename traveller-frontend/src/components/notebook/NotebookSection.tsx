@@ -3,85 +3,190 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { BookOpen } from "lucide-react";
 import { experience } from "@/content/experience";
 
 export default function NotebookSection() {
   const { notebook } = experience;
+  const disciplines = notebook.disciplines || [];
+  const specs = notebook.specs || [];
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#101A2C] via-[#0E1726] to-[#0A101C] py-36 sm:py-52 px-6 sm:px-10 overflow-hidden">
-      <div className="max-w-[1200px] mx-auto relative z-10">
-        <div className="mb-12 sm:mb-16">
-          <span className="text-[11px] tracking-[0.35em] text-[#E2BA72] uppercase font-light">
-            {notebook.label}
-          </span>
+    <section
+      id="the-companion"
+      className="relative w-full bg-gradient-to-b from-[#0E1729] via-[#0A111F] to-[#070B14] py-32 sm:py-48 px-6 sm:px-10 overflow-hidden border-t border-white/[0.06]"
+    >
+      {/* Ambient paper warmth glow */}
+      <div
+        className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[550px] pointer-events-none opacity-25 blur-[150px]"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(226, 186, 114, 0.22) 0%, rgba(14, 23, 42, 0.45) 55%, transparent 80%)",
+        }}
+      />
+
+      <div className="max-w-[1240px] mx-auto relative z-10">
+        {/* Section Header */}
+        <div className="max-w-[840px] mb-20 sm:mb-28">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="flex items-center gap-3 mb-5"
+          >
+            <span className="w-8 h-[1px] bg-[#E2BA72]" />
+            <span className="text-[11px] font-mono tracking-[0.35em] text-[#E2BA72] uppercase font-medium">
+              {notebook.label} {"//"} ANALOG SANCTUARY
+            </span>
+          </motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.1 }}
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-[#F8F6F0] tracking-tight leading-[0.96] mb-6"
+          >
+            {notebook.title}
+            <br />
+            <span className="text-[#F3D089]">{notebook.subtitle}</span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="font-serif text-xl sm:text-2xl md:text-3xl text-[#D6C2B4] font-light italic leading-relaxed"
+          >
+            {notebook.lead}
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+        {/* Two-Column Editorial Display */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-24 sm:mb-32">
           {/* Left Column: Tactile Artifact Visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.97 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: 1.1, ease: "easeOut" }}
-            className="lg:col-span-7 relative"
+            className="lg:col-span-6 relative group"
           >
-            {/* Ambient paper warmth glow */}
-            <div className="absolute -inset-4 bg-[#E2BA72]/10 rounded-3xl blur-3xl pointer-events-none" />
+            {/* Ambient paper warmth glow behind frame */}
+            <div className="absolute -inset-4 bg-[#E2BA72]/15 rounded-3xl blur-3xl pointer-events-none group-hover:bg-[#E2BA72]/25 transition-all duration-700" />
 
-            <div className="relative h-[420px] sm:h-[520px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-[#080B12]">
+            <div className="relative h-[440px] sm:h-[540px] md:h-[600px] w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-[#080B12]">
               <Image
-                src="/images/notebook.jpg"
-                alt="A physical field notebook and brass pen on stone"
+                src="/images/companion-journal.jpg"
+                alt="Open vintage traveler's notebook with deckled pages and brass pen resting on desert sandstone"
                 fill
-                sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover object-center brightness-90 hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center brightness-95 group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#08090C] via-[#08090C]/20 to-transparent" />
-              
-              {/* Field note label */}
-              <div className="absolute bottom-6 left-8 right-8">
-                <span className="text-[10px] tracking-[0.25em] text-[#E2BA72] uppercase font-mono block mb-1">
-                  TACTILE COMPANION // UNLINED STOCK
-                </span>
-                <p className="text-xs text-[#A2A7B0] font-light">
-                  A silent surface for thoughts that vanish the moment they are typed into a screen.
+              <div className="absolute inset-0 bg-gradient-to-t from-[#08090C] via-[#08090C]/25 to-transparent" />
+
+              {/* Floating Field Inscription Badge */}
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#080B12]/85 backdrop-blur-md border border-white/[0.08]">
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="text-[10px] tracking-[0.25em] text-[#E2BA72] uppercase font-mono">
+                    FIELD SPECIMEN // UNLINED STOCK
+                  </span>
+                  <span className="text-[10px] font-mono text-[#A2A7B0]">
+                    26°17&apos;N · 72°58&apos;E
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-[#F8F6F0] font-light italic leading-relaxed">
+                  &ldquo;05:32 AM — The wind shifted across Kaylana. A stone fell from the ledge. No one looked back. For the first time in months, the mind is quiet.&rdquo;
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Column: Statement */}
-          <div className="lg:col-span-5 space-y-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-10% 0px" }}
-              transition={{ duration: 1 }}
-              className="space-y-6"
-            >
-              <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal text-[#F8F6F0] leading-[1.02] tracking-tight">
-                {notebook.title}
-                <br />
-                <span className="text-[#F3D089]">{notebook.subtitle}</span>
-              </h2>
+          {/* Right Column: The Three Analog Disciplines */}
+          <div className="lg:col-span-6 space-y-6 pt-2">
+            <div className="pb-4 border-b border-white/[0.08]">
+              <span className="text-[10px] font-mono tracking-[0.3em] text-[#E2BA72] uppercase block mb-2">
+                THE POWER OF THE PHYSICAL PAGE
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl text-[#F8F6F0] font-light">
+                Why Ink Matters
+              </h3>
+            </div>
 
-              <div className="space-y-4 pt-2 text-lg sm:text-2xl text-[#A2A7B0] font-light leading-relaxed">
-                {notebook.lines.map((line, idx) => (
-                  <p key={idx} className={idx === 1 ? "text-[#F8F6F0] font-normal" : ""}>
-                    {line}
+            <div className="space-y-4">
+              {disciplines.map((disc, idx) => (
+                <motion.div
+                  key={disc.number}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: idx * 0.12 }}
+                  className="p-6 rounded-xl bg-[#080B14]/80 border border-white/[0.06] hover:border-[#E2BA72]/30 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-[10px] font-mono text-[#E2BA72]">
+                      {disc.number}
+                    </span>
+                    <span className="text-white/20">|</span>
+                    <h4 className="text-xs font-mono tracking-widest text-[#F8F6F0] uppercase font-medium">
+                      {disc.title}
+                    </h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#A2A7B0] font-light leading-relaxed">
+                    {disc.description}
                   </p>
-                ))}
-              </div>
+                </motion.div>
+              ))}
+            </div>
 
-              <div className="pt-8 border-t border-white/[0.08]">
-                <p className="font-serif text-lg sm:text-xl text-[#F8F6F0]/85 italic font-light">
-                  &ldquo;Some observations exist only in ink before the sun climbs.&rdquo;
-                </p>
-              </div>
+            {/* Inscription Quote */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="p-6 rounded-xl bg-gradient-to-r from-[#E2BA72]/10 via-transparent to-transparent border-l-2 border-[#E2BA72] mt-6"
+            >
+              <p className="font-serif text-lg sm:text-xl text-[#F8F6F0] italic font-light leading-relaxed">
+                &ldquo;{notebook.quote}&rdquo;
+              </p>
             </motion.div>
           </div>
         </div>
+
+        {/* Companion Specifications Ledger */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+          className="rounded-2xl border border-white/[0.08] bg-[#07090F]/90 backdrop-blur-md p-8 sm:p-10 shadow-2xl relative"
+        >
+          {/* Top Gold Horizon Hairline */}
+          <div className="absolute top-0 inset-x-8 sm:inset-x-12 h-[1px] bg-gradient-to-r from-transparent via-[#E2BA72]/40 to-transparent" />
+
+          <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/[0.06]">
+            <BookOpen className="w-4 h-4 text-[#E2BA72]" />
+            <span className="text-[10px] font-mono tracking-[0.25em] text-[#E2BA72] uppercase font-medium">
+              NOTEBOOK RECOMMENDATIONS
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+            {specs.map((spec) => (
+              <div key={spec.label} className="space-y-1">
+                <span className="text-[10px] font-mono tracking-[0.2em] text-[#A2A7B0] uppercase block">
+                  {spec.label}
+                </span>
+                <span className="text-xs sm:text-sm text-[#F8F6F0] font-light block">
+                  {spec.value}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
